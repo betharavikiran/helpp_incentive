@@ -1,0 +1,24 @@
+<template name="trainingVideo">
+    <div class="modal fade" id="trainingVideoModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content video-player">
+                <div class="modal-header">
+                    <h4 class="modal-title">Training Video</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="video-container">
+                        <div id="player"></div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    {{#if isStopped}}
+                       <button type="button" id="btn-assessment" class="btn btn-default" data-dismiss="modal">Assessment<i class="fa fa-arrow-right" aria-hidden="true"></i></button>.
+                    {{/if}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>

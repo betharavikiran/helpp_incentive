@@ -1,0 +1,34 @@
+<template name="trainingInstructions">
+    {{> sidebar}}
+    <div class="rightcontent">
+        <div class="maincontentwrap">
+            <div class="row training-record">
+                <h1>Training Session</h1>
+                <div class="row training-instructions">
+                    <h3>Instructions</h3>
+                    <div class="col-sm-12">
+                        <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>You will be initially shown a video session. Please watch is carefully</p>
+                        <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>On completion of the video, there will be an evaluation session during which you will be prompted with number of questions.</p>
+                        <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>You will need to score 60% to pass the assessment.</p>
+
+                    </div>
+                </div>
+                <div class="row training-sub-cycles">
+                    {{#each trainingSubCycles}}
+                        <div>
+                            {{name}}
+                        </div>
+                       <div>
+                           {{description}}
+                       </div>
+                        <div class="right">
+                            <button type="button" class="btn btn-primary" id="btn-start"><i class="fa fa-play" aria-hidden="true"></i></button>
+                        </div>
+                    {{/each }}
+               </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+

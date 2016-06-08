@@ -1,0 +1,13 @@
+<template name="assessmentResult">
+    <div class="maincontentwrap">
+        <div class="narrowrap">
+            <h1>Assessment Result</h1>
+            <div class="assessment-result">
+                You have <strong>{{profileTrainingSession.result}}</strong> the assessment test.
+                <br>
+                You scored {{profileTrainingSession.score}} out of  {{profileTrainingSession.marks}}.
+            </div>
+            <a class="dashboard" href="{{pathFor 'dashboard'}}" title="dashboard">Home<i class="fa fa-home" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</template>

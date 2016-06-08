@@ -1,0 +1,30 @@
+<template name="trueFalse">
+    <div class="maincontentwrap">
+        <div class="narrowrap">
+         <div class="question-container">
+             <div>
+               Question {{attempted_questions_count}} of {{total_questions_count}}
+             </div>
+
+            <div class="instructions">
+                Instruction:{{instructions}}
+            </div>
+            <div class="question">
+               {{question}}
+            </div>
+               <form>
+                <div class="answer-options">
+                    <div class="answer-option">
+                        <label><input id="trueOption" type="radio" name="radioOption" value={{trueOption}}>True</label>
+                    </div>
+                    <div class="answer-option">
+                        <label><input id="falseOption" type="radio" name="radioOption" value={{falseOption}}>False</label>
+                    </div>
+                </div>
+                <button type="button" id="btn-submit" value="Click" class="right">Submit</button>
+               </form>
+         </div>
+      </div>
+    </div>
+</template>
+

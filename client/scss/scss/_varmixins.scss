@@ -1,0 +1,69 @@
+// Variables
+$black: #333;
+$blackhover: darken(#333333, 10%);
+$blue: #263248;
+$bluehover: darken(#263248, 10%);
+$gray: #666;
+$light: #999;
+$white: #fff;
+$red: #e3283e;
+$green: #9c0;
+$redhover: darken(#e3283e, 10%);
+$border: #e8e8e8;
+$bgc: #fafafa;
+$bordehover: darken($border, 15%);
+$orange: #f60;
+// Mixins
+
+@mixin transitions {
+    -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    -ms-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+@mixin transition($prop) {
+    -webkit-transition: $prop 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: $prop 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: $prop 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    -ms-transition: $prop 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    transition: $prop 600ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+@mixin shadow($x, $y, $s, $c) {
+    -webkit-box-shadow: $x $y $s $c;
+    -moz-box-shadow: $x $y $s $c;
+    -ms-shadow: $x $y $s $c;
+    box-shadow: $x $y $s $c;
+}
+@mixin inset($x, $y, $s, $c) {
+    -webkit-box-shadow: inset $x $y $s $c;
+    -moz-box-shadow: inset $x $y $s $c;
+    -ms-shadow: inset $x $y $s $c;
+    box-shadow: inset $x $y $s $c;
+}
+@mixin radius($r) {
+    -webkit-border-radius: $r;
+    -moz-border-radius: $r;
+    -ms-border-radius: $r;
+    border-radius: $r;
+}
+@mixin bradius($tl, $tr, $br, $bl) {
+    -webkit-border-radius: $tl $tr $br $bl;
+    -moz-border-radius: $tl $tr $br $bl;
+    -ms-border-radius: $tl $tr $br $bl;
+    border-radius: $tl $tr $br $bl;
+}
+@mixin translate($tx, $ty){
+    -webkit-transform: translate($tx, $ty);
+    -moz-transform: translate($tx, $ty);
+    -ms-transform: translate($tx, $ty);
+    -o-transform: translate($tx, $ty);
+    transform: translate($tx, $ty);
+}
+@mixin rotate($tx){
+    -webkit-transform: rotate($tx);
+    -moz-transform: rotate($tx);
+    -ms-transform: rotate($tx);
+    -o-transform: rotate($tx);
+    transform: rotate($tx);
+}

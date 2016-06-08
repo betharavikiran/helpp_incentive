@@ -1,0 +1,28 @@
+<template name="assignedCycle">
+    {{> sidebar}}
+    <div class="rightcontent">
+        <div class="maincontentwrap">
+            <div class="trainings-assigned">Trainings Assigned</div>
+            <div class="row training-record">
+                {{#if assignedTrainingSession}}
+
+                {{#each assignedTrainingSession}}
+                    <div class="col-sm-10">
+                        <div class="col-sm-3">
+                            <h3>{{name}}</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <div>{{description}}</div>
+                        </div>
+                        <div class="col-sm-1 training-play-btn">
+                            <button type="button" class="btn btn-primary" id="btn-training"><i class="fa fa-graduation-cap" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                {{/each}}
+                {{else}}
+                    <h3>At this moment,you don't have any trainings assigned.</h3>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

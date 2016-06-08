@@ -1,0 +1,25 @@
+<template name="sampleSurvey">
+    <div class="rightcontent">
+        <div class="maincontentwrap">
+            <div class="row">
+                <button id="btn-getQuestion">Get Next Question</button>
+                <br>
+                <h1>Survey Demo</h1>
+                <br>
+                <div class="col-sm-12">
+                   <div style="font-size: medium; padding: 5px; background-color: #25ba9c;color: white;"> {{question}}</div>
+                    <br>
+                    <form class="form-horizontal well qa-response-form">
+                     {{#each response_options}}
+                            <div class="answer-options">
+                                <div class="answer-option">
+                                    <label><input class="responseSelected" type="radio" name="radioOption" value={{valueStr}}>{{display}}</label>
+                                </div>
+                            </div>
+                    {{/each}}
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,17 @@
+@media all and (min-width: 481px) and (max-width: 600px){
+  .dash-item-wrap{
+      width: 100%!important;
+  }
+  .filters{
+    margin-bottom: 20px!important;
+  }
+}
+
+@media all and (min-width: 601px) and (max-width: 800px){
+  .dash-item-wrap{
+      width: 50%!important;
+  }
+  .filters{
+    margin-bottom: 20px!important;
+  }
+}

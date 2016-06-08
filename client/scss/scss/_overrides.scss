@@ -1,0 +1,110 @@
+/* Custom Scrollbars */
+/* Webkit */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $red;
+}
+
+@-moz-document url-prefix(http://),
+url-prefix(https://) {
+    scrollbar {
+        -moz-appearance: none !important;
+        background: rgb(0, 255, 0) !important;
+    }
+
+    thumb,
+    scrollbarbutton {
+        -moz-appearance: none !important;
+        background-color: rgb(0, 0, 255) !important;
+    }
+
+    thumb:hover,
+    scrollbarbutton:hover {
+        -moz-appearance: none !important;
+        background-color: rgb(255, 0, 0) !important;
+    }
+
+    scrollbarbutton {
+        display: none !important;
+    }
+
+    scrollbar[orient="vertical"] {
+        min-width: 8px !important;
+    }
+}
+
+
+/* Packages Overrides */
+.picker {
+    width: 470px;
+}
+
+.picker__frame {
+    overflow: hidden;
+    padding: 18px 1px;
+}
+
+.picker__button--today,
+.picker__button--clear,
+.picker__button--close {
+    color: $black;
+}
+
+.picker__nav--next {
+    right: 0;
+}
+
+.picker__nav--prev {
+    left: 0;
+}
+
+.picker__select--month,
+.picker__select--year {
+    padding: 0 10px;
+}
+
+.selectize-input input {
+    font-size: 16px;
+    height: 44px;
+    line-height: 1;
+}
+
+.selectize-input {
+    padding: 0 8px;
+    line-height: 44px;
+    font-size: 16px;
+}
+
+.selectize-dropdown {
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.leaflet-popup-content {
+    h1 {
+        font-size: 14px;
+        color: $red;
+        font-weight: 700;
+    }
+
+    em {
+        font-style: italic;
+        color: #666;
+    }
+
+    p {
+        color: #333;
+    }
+}

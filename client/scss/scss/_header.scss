@@ -1,0 +1,38 @@
+.header {
+    background-color: $white;
+
+    @include shadow(0, 1px, 6px, rgba(0, 0, 0, 0.3));
+}
+
+
+.logo {
+    display: inline-block;
+    margin-top: 9px;
+
+    img {
+        width: 32px;
+    }
+}
+
+.headnav {
+    float: right;
+}
+.headnav li,
+.headnav a {
+    float: left;
+}
+
+.headnav a {
+    display: block;
+    color: #fff;
+    line-height: 60px;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.headnav a:hover {
+    background: $gray;
+}
+.headnav a:active {
+    background: darken($gray, 10%);
+}

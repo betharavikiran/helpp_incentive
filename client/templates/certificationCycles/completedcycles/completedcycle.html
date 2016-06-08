@@ -1,0 +1,41 @@
+<template name="completedCycle">
+    {{> sidebar}}
+    <div class="rightcontent">
+        <div class="maincontentwrap">
+            {{#if trainingSessionCompleted}}
+            <div class="trainings-assigned">Trainings Completed</div>
+            <div class="row ">
+                {{#each trainingSessionCompleted}}
+                    <div class="row training-record-completed">
+                        <div class="col-sm-10">
+                            <div class="col-sm-2">
+                                <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i>{{name}}</h3>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>{{description}}</div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+            {{/if}}
+            {{#if trainingSessionAttempted}}
+            <div class="trainings-assigned">Trainings Attempted</div>
+            <div class="row">
+                {{#each trainingSessionAttempted}}
+                    <div class="row trainingSessionAttempted">
+                        <div class="col-sm-10">
+                            <div class="col-sm-3">
+                                <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i>{{name}}</h3>
+                            </div>
+                            <div class="col-sm-7">
+                                <div>{{description}}</div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</template>

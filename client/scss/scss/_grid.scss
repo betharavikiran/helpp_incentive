@@ -1,0 +1,579 @@
+/* Grid Helpers */
+.sublimegrid:after,
+.sublimegrid:before,
+.sublimegridify:after,
+.sublimegridify:before {
+    content: " ";
+    display: table;
+}
+
+.sublimegrid:after,
+.sublimegridify:after {
+    clear: both;
+}
+
+.inlinesublimegrid {
+    white-space: nowrap;
+
+    .thirds {
+        display: inline-block;
+        vertical-align: middle;
+        width: 33.33%;
+        white-space: normal;
+        margin-right: -4px;
+    }
+}
+
+.sublimegridify {
+    &.widelast {
+        .form-group:last-of-type {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    & > .form-group {
+        width: 49%;
+        margin-right: 2%;
+        float: left;
+
+        & > .form-group {
+            margin-bottom: 0;
+        }
+
+        &:nth-of-type(2n+2) {
+            margin-right: 0;
+        }
+
+        &.no-b-margin {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.sublimegrid {
+    .half {
+        width: 50%;
+        float: left;
+    }
+
+    .halved {
+        width: 49%;
+        margin-right: 2%;
+        float: left;
+
+        &:nth-of-type(2n+2) {
+            margin-right: 0;
+        }
+    }
+
+    .thirds {
+        width: 33.33%;
+        float: left;
+    }
+}
+.sublimegridsmall {
+    .half {
+        width: 50%;
+        float: left;
+    }
+    .halved {
+        width: 49%;
+        margin-right: 2%;
+        float: left;
+
+        &:nth-of-type(2n+2) {
+            margin-right: 0;
+        }
+    }
+    .thirds {
+        width: 33.33%;
+        float: left;
+    }
+    .quarter {
+        width: 25%;
+        float: left;
+    }
+}
+/* Table Styles */
+.gridview {
+    width: 100%;
+    overflow: auto;
+    &.coloredcells {
+        .available {
+            background-color: #fff;
+        }
+
+        .picked {
+            background-color: #fc0;
+        }
+
+        .delivered {
+            background-color: #9c0;
+        }
+    }
+}
+
+.gridview {
+    table {
+        border: 1px solid $border;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    &.light {
+        table,
+        td {
+            border-color: #f3f3f3;
+        }
+    }
+
+    .orderStatusOption {
+        height: 32px;
+        line-height: 32px;
+        padding: 0 0 0 10px;
+        width: 100%;
+        display: block;
+    }
+
+    .orderStatusChange {
+        display: block;
+        line-height: 32px;
+        padding: 0 10px;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        background-color: $red;
+        color: #fff;
+
+        @include radius(4px);
+
+        text-align: center;
+        margin-top: 5px;
+
+        &.hide {
+            display: none;
+        }
+
+        &:hover {
+            background-color: $redhover;
+        }
+    }
+}
+
+.gridview td,
+.gridview th {
+    border: 1px solid $border;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+
+    &.compact {
+        min-width: 40px;
+        width: 40px;
+    }
+
+    &.narrow {
+        min-width: 70px;
+        width: 70px;
+    }
+
+    &.cozy {
+        min-width: 100px;
+        width: 100px;
+    }
+
+    &.medium {
+        min-width: 120px;
+        width: 120px;
+    }
+
+    &.wide {
+        min-width: 160px;
+        width: 160px;
+    }
+
+    &.wider {
+        min-width: 200px;
+        width: 200px;
+    }
+
+    &.superwide {
+        min-width: 260px;
+        width: 260px;
+    }
+
+    &.wideo {
+        min-width: 40%;
+        width: 40%;
+    }
+
+    &.nowrap {
+        white-space: nowrap;
+    }
+}
+.gridview th {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    white-space: nowrap !important;
+    font-family: "Roboto Condensed";
+    letter-spacing: 0.05em;
+    background-color: #f3f3f3;
+}
+.viewbox{
+    background-color: #fff;
+    border: 1px solid $border;
+    margin-bottom: 20px;
+    border-top: none;
+    @include bradius(0, 0, 6px, 6px);
+    overflow: hidden;
+}
+.gridview tr:nth-child(even) td {
+    background-color: #fafafa;
+}
+
+.gridview tr:nth-child(odd) td {
+    background-color: #fff;
+}
+
+.gridview tr td.Processing {
+    font-weight: 700;
+    color: #999;
+    text-align: center;
+    text-transform: uppercase;
+
+    select {
+        border-color: #999;
+        color: #999;
+        font-weight: 700;
+    }
+}
+
+.gridview tr td.CashReturn {
+    font-weight: 700;
+    color: #9c0;
+    text-align: center;
+    text-transform: uppercase;
+    select {
+        border-color: #9c0;
+        color: #9c0;
+        font-weight: 700;
+    }
+}
+.gridview tr td.Picked {
+    font-weight: 700;
+    color: #9c0;
+    text-align: center;
+    text-transform: uppercase;
+
+    select {
+        border-color: #9c0;
+        color: #9c0;
+        font-weight: 700;
+    }
+}
+
+.gridview tr td.InTransit {
+    font-weight: 700;
+    color: #9c0;
+    text-align: center;
+    text-transform: uppercase;
+
+    select {
+        border-color: #9c0;
+        color: #9c0;
+        font-weight: 700;
+    }
+}
+
+.gridview tr td.CancelledbyStore,
+.gridview tr td.CancelledbyCustomer,
+.gridview tr td.CancelledWrongAddress,
+.gridview tr td.CancelledDuplicateOrder,
+.gridview tr td.CancelledDBNotAvailable,
+.gridview tr td.CancelledTechnicalProblem {
+    font-weight: 700;
+    color: #c30;
+    text-align: center;
+    text-transform: uppercase;
+
+    select {
+        border-color: #c30;
+        color: #c30;
+        font-weight: 700;
+    }
+}
+
+.gridview tr td.Accepted {
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+
+    select {
+        border-color: #333;
+        color: #333;
+        font-weight: 700;
+    }
+}
+
+.gridview tr td.Towards {
+    font-weight: 700;
+    color: #09c;
+    text-align: center;
+    text-transform: uppercase;
+
+    select {
+        border-color: #09c;
+        color: #09c;
+        font-weight: 700;
+    }
+}
+
+.gridview tr td.Delivered {
+    font-weight: 700;
+    color: #9c0;
+    text-align: center;
+    text-transform: uppercase;
+
+    select {
+        border-color: #9c0;
+        color: #9c0;
+        font-weight: 700;
+    }
+}
+
+.gridview tr td.Cancelled {
+    font-weight: 700;
+    color: #f60;
+    text-align: center;
+    text-transform: uppercase;
+
+    select {
+        border-color: #f60;
+        color: #f60;
+        font-weight: 700;
+    }
+}
+
+.gridview tr td.Returned {
+    font-weight: 700;
+    color: #c30;
+    text-align: center;
+    text-transform: uppercase;
+
+    select {
+        border-color: #c30;
+        color: #c30;
+        font-weight: 700;
+    }
+}
+.gridview .row:hover td {
+    cursor: pointer;
+    background-color: #fafafa;
+}
+
+.gridview .row,
+.gridview .row td {
+    cursor: pointer;
+}
+
+.gridview.orders .row,
+.gridview.orders .row td,
+.gridview.orders .row:hover td {
+    cursor: default;
+}
+
+.gridview .parent {
+    td:first-of-type {
+        z-index: 1;
+        border-left: 15px solid lighten($red, 15%);
+    }
+
+    & ~ .child {
+        td:first-of-type {
+            border-left: 15px solid lighten($red, 25%);
+        }
+    }
+}
+.gridview .single {
+    td:first-of-type {
+        border-left: 15px solid $border;
+    }
+}
+.gridview .working,
+.gridview .working.single,
+.gridview .working.parent,
+.gridview .working.child {
+    td:first-of-type {
+        border-right: 4px solid #f6f6f6 !important;
+    }
+}
+.gridview .working{
+    td{
+        background: url('images/stripe.gif');
+        background-size: 20px;
+    }
+}
+
+.gridview .single.timeerror,
+.gridview .parent.timeerror,
+.gridview .child.timeerror,
+.gridview .working.single.timeerror,
+.gridview .working.parent.timeerror,
+.gridview .working.child.timeerror {
+    td:first-of-type {
+        border-right: 4px solid #c30;
+    }
+}
+
+.gridview .single.etaerror,
+.gridview .parent.etaerror,
+.gridview .child.etaerror,
+.gridview .working.single.etaerror,
+.gridview .working.parent.etaerror,
+.gridview .working.child.etaerror {
+    td{
+        background-color: lighten(#f60, 40%);
+        border-color: lighten(#f60, 30%);
+    }
+}
+
+.gridview .single.recharged,
+.gridview .parent.recharged,
+.gridview .child.recharged,
+.gridview .working.single.recharged,
+.gridview .working.parent.recharged,
+.gridview .working.child.recharged {
+    td{
+        background-color: lighten(#09c, 54%);
+        border-color: lighten(#09c, 44%);
+    }
+}
+
+.gridview .single.timewarning,
+.gridview .parent.timewarning,
+.gridview .child.timewarning,
+.gridview .working.single.timewarning,
+.gridview .working.parent.timewarning,
+.gridview .working.child.timewarning {
+    td:first-of-type {
+        position: relative;
+        z-index: 1;
+        border-right: 4px solid #c60;
+    }
+}
+
+.gridview .single.etawarning,
+.gridview .parent.etawarning,
+.gridview .child.etawarning,
+.gridview .working.single.etawarning,
+.gridview .working.parent.etawarning,
+.gridview .working.child.etawarning {
+    td{
+        background-color: lighten(#fc0, 44%);
+        border-color: lighten(#fc0, 30%);
+    }
+}
+.blockgrid{
+    &.two{
+        .gridblock{
+            width: 49%;
+            margin-bottom: 2%;
+            margin-right: 2%;
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
+    &.three{
+        .gridblock{
+            width: 32%;
+            float: left;
+            margin-bottom: 2%;
+            margin-right: 2%;
+            &:nth-of-type(3n+3){
+                margin-right: 0;
+            }
+        }
+    }
+     &.four{
+        .gridblock{
+            width: 23.5%;
+            float: left;
+            margin-bottom: 2%;
+            margin-right: 2%;
+            &:nth-of-type(4n+4){
+                margin-right: 0;
+            }
+        }
+    }
+    .gridblock{
+        background-color: #fff;
+        @include radius(4px);
+        padding: 20px;
+        border: 1px solid $border;
+        h5{
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 10px;
+            color: $red;
+        }
+        input[type="text"]{
+            margin-bottom: 10px;
+            line-height: 30px;
+            height: 30px;
+            font-size: 14px;
+        }
+        a{
+            border: 1px solid $border;
+            @include radius(4px);
+            background-color: #fff;
+            font-size: 12px;
+            display: inline-block;
+            line-height: 30px;
+            padding: 0 12px;
+            color: #666;
+            font-weight: 700;
+            text-transform: uppercase;
+            &:hover{
+                color: #333;
+                border-color: $red;
+            }
+            &.red{
+                background-color: $red;
+                color: $white;
+            }
+            &:active{
+                color: #666;
+                @include inset(0,0, 2px, rgba(0,0,0,.3));
+                border-color: darken($border, 10%);
+            }
+        }
+        &.wideblock{
+            text-align: center;
+            h1{
+                display: inline-block;
+                vertical-align: middle;
+                width: 15%;
+                text-align: right;
+                font-weight: 700;
+            }
+            .the-threes{
+                width: 78%;
+                display: inline-block;
+                vertical-align: middle;
+                input, a{
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 32%;
+                    margin-right: 2%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

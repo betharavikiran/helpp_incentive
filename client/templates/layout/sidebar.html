@@ -1,0 +1,44 @@
+<head>
+    <title>Helpp Incentive</title>
+</head>
+
+<template name="sidebar">
+    <div class="sidebar expand">
+        <div class="sidebarwrap">
+            <div class="sidelogo"><i>Helpp Incentive</i></div>
+            <ul class="sidenav">
+                <h5 class="sidelabel">Dashboard<i class="fa fa-home" aria-hidden="true"></i></h5>
+                <li>
+                    <a class="overall" href="{{pathFor 'overall'}}" title="overall">Overall<i class="fa fa-flag-checkered" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a class="lastCycle" href="{{pathFor 'lastCycle'}}" title="lastCycle">Last Cycle<i class="fa fa-flag-o" aria-hidden="true"></i></a>
+                </li>
+                <h5 class="sidelabel">Certification Cycles<i class="fa fa-repeat" aria-hidden="true"></i></h5>
+                <li>
+                    <a class="assignedCycle" href="{{pathFor 'assignedCycle'}}" title="assignedCycle">Assigned<i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a class="completedCycle" href="{{pathFor 'completedCycle'}}" title="completedCycle">Completed<i class="fa fa-history" aria-hidden="true"></i></a>
+                </li>
+                <h5 class="sidelabel">Rewards<i class="fa fa-gift" aria-hidden="true"></i></h5>
+                <li>
+                    <a class="stockHoldings" href="{{pathFor 'stockHoldings'}}" title="stockHoldings">Stock Holdings<i class="fa fa-money" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a class="earnedPoints" href="{{pathFor 'earnedPoints'}}" title="earnedPoints">Earned Points<i class="fa fa-user" aria-hidden="true"></i></a>
+                </li>
+                <h5 class="sidelabel">Account<i class="fa fa-user" aria-hidden="true"></i></h5>
+                <li>
+                    <a id="logout" class="logoff" href="{{pathFor 'logoff'}}" title="logoff">Logoff<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+            <div class="sidefooter">
+                <h5 class="sidelabel">User</h5>
+                <div class="sublimegrid">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
